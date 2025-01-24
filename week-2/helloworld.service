@@ -1,0 +1,12 @@
+[Unit]
+Description=NodeJS web server
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/node-20 /usr/local/bin/helloworld.js
+ExecReload=/usr/bin/node-20 /usr/local/bin/helloworld.js
+Restart=always
+
+[Install]
+WantedBy=default.target
+RequiredBy=network.target
